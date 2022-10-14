@@ -1,8 +1,12 @@
 <resources>
     <string name="app_name">TestDeliveryHS</string>
+
     <string name="title_menu">Menu</string>
     <string name="title_profile">Profile</string>
     <string name="title_cart">Cart</string>
+
+    <string name="content_des_more_cities">More cities</string>
+    <string name="content_des_qr_scanner">QR</string>
 
     <string name="error_upcoming_feature">Sorry. The functionality is not available in current app version</string>
 </resources>

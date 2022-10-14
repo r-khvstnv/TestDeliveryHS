@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CardBanner" parent="Widget.Material3.CardView.Elevated">
+        <item name="android:layout_width">@dimen/card_banner_width</item>
+        <item name="android:layout_height">@dimen/card_banner_height</item>
+        <item name="android:layout_marginEnd">@dimen/card_banner_margin_end</item>
+        <item name="android:background">?android:attr/colorBackground</item>
+        <item name="cardCornerRadius">@dimen/card_banner_corner_radius</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+
+    <style name="ButtonGoodsCategory" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:state_checked">false</item>
+        <item name="fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">@dimen/btn_goods_category_text_size</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_marginEnd">@dimen/btn_goods_category_margin_end</item>
+    </style>
+
+    <style name="ButtonCost" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">@dimen/btn_cost_text_size</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="strokeColor">?attr/colorPrimary</item>
+        <item name="lineHeight">@dimen/btn_cost_line_height</item>
+    </style>
+
+</resources>
