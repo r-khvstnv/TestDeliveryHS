@@ -7,6 +7,9 @@
 
     <string name="content_des_more_cities">More cities</string>
     <string name="content_des_qr_scanner">QR</string>
+    
+    <string name="hint_from">from</string>
+    <string name="currency_ruble">R</string>
 
     <string name="error_upcoming_feature">Sorry. The functionality is not available in current app version</string>
 </resources>

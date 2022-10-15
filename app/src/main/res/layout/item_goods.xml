@@ -48,6 +48,7 @@
 
         <Button
             style="@style/ButtonCost"
+            android:id="@+id/btn_item_goods_cost"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"

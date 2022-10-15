@@ -77,7 +77,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="@dimen/m_default_margin"
-                    android:layout_marginStart="@dimen/m_default_margin"
                     android:minHeight="@dimen/card_banner_height"
                     app:layout_collapseMode="parallax"
                     tools:background="?attr/colorPrimaryContainer" />
@@ -93,6 +92,7 @@
                     tools:background="?attr/colorOnBackground">
 
                     <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_goods_categories"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/rv_goods_categories_min_height"
                         app:layout_collapseMode="pin" />

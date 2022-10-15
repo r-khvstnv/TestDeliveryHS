@@ -10,8 +10,6 @@
     <color name="md_theme_light_onBackground">#222831</color>
     <color name="md_theme_light_surface">#FFFBFE</color>
     <color name="md_theme_light_onSurface">#7B7B7B</color>
-    <color name="md_theme_light_surfaceVariant">#E7E0EC</color>
+    <color name="md_theme_light_surfaceVariant">#FFFBFE</color>
     <color name="md_theme_light_onSurfaceVariant">#AAAAAD</color>
-
-
 </resources>

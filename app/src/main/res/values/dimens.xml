@@ -7,7 +7,7 @@
 
     <dimen name="card_banner_width">300dp</dimen>
     <dimen name="card_banner_height">112dp</dimen>
-    <dimen name="card_banner_margin_end">8dp</dimen>
+    <dimen name="card_banner_margin_start">16dp</dimen>
     <dimen name="card_banner_corner_radius">10dp</dimen>
 
     <dimen name="btn_goods_category_text_size">16sp</dimen>
