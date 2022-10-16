@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TestDeliveryHS</string>
+    <string name="title_menu">Меню</string>
+    <string name="title_profile">Профиль</string>
+    <string name="title_cart">Корзина</string>
+    <string name="content_des_more_cities">Другие Города</string>
+    <string name="hint_from">от</string>
+    <string name="currency_ruble">р</string>
+</resources>
