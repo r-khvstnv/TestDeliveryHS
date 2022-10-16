@@ -5,24 +5,26 @@
     <dimen name="current_city_line_height">19sp</dimen>
     <dimen name="icon_more_cities_margin_start">8dp</dimen>
 
+    <dimen name="rv_card_preview_margin_top">96dp</dimen>
+
     <dimen name="card_banner_width">300dp</dimen>
     <dimen name="card_banner_height">112dp</dimen>
     <dimen name="card_banner_margin_start">16dp</dimen>
     <dimen name="card_banner_corner_radius">10dp</dimen>
 
     <dimen name="btn_goods_category_text_size">16sp</dimen>
-    <dimen name="btn_goods_category_margin_end">8dp</dimen>
+    <dimen name="btn_goods_category_margin_start">8dp</dimen>
 
-    <dimen name="toolbar_goods_categories_margin_top">8dp</dimen>
-    <dimen name="toolbar_goods_categories_margin_bottom">16dp</dimen>
     <dimen name="rv_goods_categories_min_height">50dp</dimen>
+    <dimen name="rv_goods_categories_margin_start">8dp</dimen>
 
-    <dimen name="item_goods_preview_size">146dp</dimen>
+    <dimen name="item_goods_preview_size">154dp</dimen>
     <dimen name="item_goods_description_layout_margin_start">22sp</dimen>
     <dimen name="item_goods_title_title_text_size">20sp</dimen>
     <dimen name="item_goods_title_line_height">18sp</dimen>
     <dimen name="item_goods_ingredients_text_size">16sp</dimen>
     <dimen name="item_goods_ingredients_line_height">18sp</dimen>
+    <dimen name="item_goods_ingredients_margin_vertical">4dp</dimen>
 
     <dimen name="btn_cost_text_size">16sp</dimen>
     <dimen name="btn_cost_line_height">16sp</dimen>

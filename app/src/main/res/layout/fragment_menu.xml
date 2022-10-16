@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,99 +7,103 @@
     android:orientation="vertical"
     tools:context=".presentation.menu.MenuFragment">
 
-
-    <!--Custom TopAppBar Layout-->
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <!--Collapsing Toolbar-->
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="16dp"
-        android:orientation="horizontal"
-        android:padding="@dimen/m_default_margin">
+        android:background="?android:attr/colorBackground"
+        app:elevation="0dp">
 
-        <!--Current city with option-->
-        <TextView
-            android:id="@+id/_city"
-            android:layout_width="wrap_content"
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Москва"
-            android:textColor="?attr/colorOnBackground"
-            android:textSize="@dimen/current_city_text_size"
-            app:fontFamily="@font/roboto_medium"
-            app:layout_constraintBottom_toBottomOf="@id/_scanner"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/_scanner"
-            app:lineHeight="@dimen/current_city_line_height"
-            tools:ignore="HardcodedText" />
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-        <ImageView
-            android:id="@+id/_more_cities"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/icon_more_cities_margin_start"
-            android:contentDescription="@string/content_des_more_cities"
-            android:src="@drawable/ic_chevron_down"
-            app:layout_constraintBottom_toBottomOf="@+id/_city"
-            app:layout_constraintStart_toEndOf="@id/_city"
-            app:tint="?attr/colorOnBackground" />
+            <!--RecyclerView for Banners-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_banners"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/rv_card_preview_margin_top"
+                android:minHeight="@dimen/card_banner_height"
+                app:layout_collapseMode="none"
+                tools:background="?attr/colorPrimaryContainer" />
 
-        <!--QR Scanner-->
-        <ImageView
-            android:id="@+id/_scanner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/content_des_qr_scanner"
-            android:src="@drawable/ic_code_scanner"
-            app:layout_constraintBottom_toBottomOf="@+id/_more_cities"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:tint="?attr/colorOnBackground" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--Always visible RecyclerView for goods categories-->
+            <Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:background="?android:attr/colorBackground"
+                android:paddingVertical="@dimen/m_default_margin"
+                app:layout_collapseMode="pin">
 
+                <!--Custom TopAppBar Layout-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/m_default_margin"
+                    android:orientation="horizontal">
 
-    <!--Layout with all RecyclerViews-->
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    <!--Current city with option-->
+                    <TextView
+                        android:id="@+id/_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ташкент"
+                        android:textColor="?attr/colorOnBackground"
+                        android:textSize="@dimen/current_city_text_size"
+                        app:fontFamily="@font/roboto_medium"
+                        app:layout_constraintBottom_toBottomOf="@id/_scanner"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/_scanner"
+                        app:lineHeight="@dimen/current_city_line_height"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageView
+                        android:id="@+id/_more_cities"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/icon_more_cities_margin_start"
+                        android:contentDescription="@string/content_des_more_cities"
+                        android:src="@drawable/ic_chevron_down"
+                        app:layout_constraintBottom_toBottomOf="@+id/_city"
+                        app:layout_constraintStart_toEndOf="@id/_city"
+                        app:tint="?attr/colorOnBackground" />
+
+                    <!--QR Scanner-->
+                    <ImageView
+                        android:id="@+id/_scanner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/content_des_qr_scanner"
+                        android:src="@drawable/ic_code_scanner"
+                        app:layout_constraintBottom_toBottomOf="@+id/_more_cities"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:tint="?attr/colorOnBackground" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <!--Collapsing Toolbar-->
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?android:attr/colorBackground">
 
-            <com.google.android.material.appbar.CollapsingToolbarLayout
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_goods_categories"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+                android:layout_height="@dimen/rv_goods_categories_min_height"
+                android:layout_marginStart="@dimen/rv_goods_categories_margin_start" />
 
-                <!--RecyclerView for Banners-->
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_banners"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="@dimen/m_default_margin"
-                    android:minHeight="@dimen/card_banner_height"
-                    app:layout_collapseMode="parallax"
-                    tools:background="?attr/colorPrimaryContainer" />
-
-                <!--Always visible RecyclerView for goods categories-->
-                <Toolbar
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:layout_marginTop="@dimen/toolbar_goods_categories_margin_top"
-                    android:layout_marginBottom="@dimen/toolbar_goods_categories_margin_bottom"
-                    app:layout_collapseMode="pin"
-                    tools:background="?attr/colorOnBackground">
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rv_goods_categories"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/rv_goods_categories_min_height"
-                        app:layout_collapseMode="pin" />
-                </Toolbar>
-            </com.google.android.material.appbar.CollapsingToolbarLayout>
         </com.google.android.material.appbar.AppBarLayout>
-
 
         <!--RecyclerViews with list of goods-->
         <androidx.recyclerview.widget.RecyclerView
@@ -107,29 +111,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginHorizontal="@dimen/m_default_margin"
-            android:fillViewport="true"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:minHeight="10dp"
             tools:listitem="@layout/item_goods" />
-
-
-        <!--<androidx.core.widget.NestedScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="1000dp"
-                    android:contentDescription="@string/content_des_qr_scanner"
-                    android:src="@drawable/ic_code_scanner" />
-            </LinearLayout>
-
-        </androidx.core.widget.NestedScrollView>-->
-
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
-</LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
