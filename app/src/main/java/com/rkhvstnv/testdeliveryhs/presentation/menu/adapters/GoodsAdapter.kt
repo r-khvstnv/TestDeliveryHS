@@ -12,6 +12,7 @@ import com.rkhvstnv.testdeliveryhs.databinding.ItemGoodsBinding
 import com.rkhvstnv.testdeliveryhs.domain.models.GoodsParam
 import com.rkhvstnv.testdeliveryhs.utils.loadImage
 
+/** Adapter for Goods RecyclerView*/
 class GoodsAdapter(private val context: Context):
     ListAdapter<GoodsParam, GoodsAdapter.ViewHolder>(GoodsCallback()){
     class ViewHolder(val binding: ItemGoodsBinding): RecyclerView.ViewHolder(binding.root)

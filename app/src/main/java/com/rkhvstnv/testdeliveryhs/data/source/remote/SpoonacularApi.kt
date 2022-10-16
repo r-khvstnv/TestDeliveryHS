@@ -7,6 +7,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface SpoonacularApi {
+    /** NOTE: ApiKey is NOT available on Github*/
     @GET(EndPoint.COMPLEX_SEARCH)
     suspend fun getGoodsByType(
         @Query(EndPoint.API_KEY) apiKey: String,

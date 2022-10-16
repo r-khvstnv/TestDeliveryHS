@@ -5,7 +5,7 @@ import com.rkhvstnv.testdeliveryhs.di.AppComponent
 import com.rkhvstnv.testdeliveryhs.di.DaggerAppComponent
 
 class TestDeliveryHsApplication: Application() {
-    val appComponet: AppComponent by lazy {
+    val appComponent: AppComponent by lazy {
         DaggerAppComponent.builder().build()
     }
 }

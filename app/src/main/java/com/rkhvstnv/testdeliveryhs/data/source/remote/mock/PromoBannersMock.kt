@@ -3,6 +3,8 @@ package com.rkhvstnv.testdeliveryhs.data.source.remote.mock
 import com.rkhvstnv.testdeliveryhs.R
 import com.rkhvstnv.testdeliveryhs.data.models.PromoBanner
 
+
+/** Mock data that is simulate PromoBanner source*/
 object PromoBannersMock {
     fun getPromoBanners(): List<PromoBanner>{
         return listOf(

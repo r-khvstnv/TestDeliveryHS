@@ -1,10 +1,8 @@
 package com.rkhvstnv.testdeliveryhs.presentation.menu.adapters
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -13,6 +11,7 @@ import com.rkhvstnv.testdeliveryhs.databinding.ItemGoodsCategoryBinding
 import com.rkhvstnv.testdeliveryhs.domain.models.GoodsCategoryParam
 import com.rkhvstnv.testdeliveryhs.utils.getAttrColor
 
+/** Adapter for GoodsCategories RecyclerView*/
 class GoodsCategoriesAdapter(
     private val context: Context,
     private val categoriesCallback: CategoriesCallback
@@ -31,6 +30,7 @@ class GoodsCategoriesAdapter(
         holder.binding.btnGoodsCategory.apply {
             text = category.name
 
+            /* Based on category state, will be selected corresponding background and text colors*/
             if (category.isChecked){
                 setBackgroundColor(context.getAttrColor(R.attr.colorPrimaryContainer))
                 setTextColor(context.getAttrColor(R.attr.colorOnPrimaryContainer))

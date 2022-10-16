@@ -7,7 +7,6 @@ import com.rkhvstnv.testdeliveryhs.data.models.PromoBanner
 import com.rkhvstnv.testdeliveryhs.data.source.remote.SpoonacularApi
 import com.rkhvstnv.testdeliveryhs.data.source.remote.mock.GoodsCategoriesMock
 import com.rkhvstnv.testdeliveryhs.data.source.remote.mock.PromoBannersMock
-import com.rkhvstnv.testdeliveryhs.data.utils.EndPoint
 import com.rkhvstnv.testdeliveryhs.domain.repository.Repository
 import retrofit2.Response
 import javax.inject.Inject
@@ -20,10 +19,10 @@ class RepositoryImpl @Inject constructor(
 
     override fun getPromoBanners(): List<PromoBanner> = PromoBannersMock.getPromoBanners()
 
-    override suspend fun getGoodsByType(param: String): Response<GoodsDto> {
+    override suspend fun getGoodsByType(type: String): Response<GoodsDto> {
         return spoonacularApi.getGoodsByType(
             apiKey = Key.SPOONACULAR_API_KEY,
-            type = param,
+            type = type,
             fillIngredients = true,
             amount = 5,
         )

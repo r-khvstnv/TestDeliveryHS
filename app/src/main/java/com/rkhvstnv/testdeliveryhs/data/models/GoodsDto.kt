@@ -1,5 +1,6 @@
 package com.rkhvstnv.testdeliveryhs.data.models
 
+/** Data Access Object for Spoonacular Api*/
 data class GoodsDto(
     val number: Int,
     val offset: Int,

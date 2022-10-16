@@ -8,6 +8,8 @@ data class PromoBannerParam(
     val drawable: Int
 ){
     companion object{
+
+        /** Method transform [PromoBanner] to [PromoBannerParam]*/
         fun fromPromoBanner(promoBanner: PromoBanner): PromoBannerParam{
             return PromoBannerParam(drawable = promoBanner.drawable)
         }

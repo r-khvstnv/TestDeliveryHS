@@ -5,6 +5,7 @@ object EndPoint {
     const val COMPLEX_SEARCH = "recipes/complexSearch"
     const val API_KEY: String  = "apiKey"
 
+    //Category endpoints
     const val MAIN_COURSE = "mainCourse"
     const val DESSERT = "dessert"
     const val SALAD = "salad"
@@ -13,6 +14,7 @@ object EndPoint {
     const val SAUCE = "sauce"
     const val DRINK = "drink"
 
+    //Filter type
     const val FILL_INGREDIENTS = "fillIngredients"
     const val AMOUNT = "number"
     const val TYPE = "type"

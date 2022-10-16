@@ -11,6 +11,7 @@ import com.rkhvstnv.testdeliveryhs.databinding.ItemBannerBinding
 import com.rkhvstnv.testdeliveryhs.domain.models.PromoBannerParam
 import com.rkhvstnv.testdeliveryhs.utils.loadImage
 
+/** Adapter for PromoBanners RecyclerView*/
 class PromoBannersAdapter(private val context: Context):
     ListAdapter<PromoBannerParam, PromoBannersAdapter.ViewHolder>(PromoBannersCallback()){
 

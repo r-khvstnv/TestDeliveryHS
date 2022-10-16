@@ -2,7 +2,6 @@ package com.rkhvstnv.testdeliveryhs.presentation.menu
 
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -35,7 +34,7 @@ class MenuFragment : Fragment() {
 
     override fun onAttach(context: Context) {
         (requireActivity().applicationContext as TestDeliveryHsApplication)
-            .appComponet
+            .appComponent
             .inject(this)
         super.onAttach(context)
     }
@@ -52,25 +51,32 @@ class MenuFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        Toast.makeText(requireContext(), "Developed by Ruslan Khvastunov", Toast.LENGTH_SHORT).show()
+
         setupPromoBannersRecyclerView()
         setupGoodsCategoriesRecyclerView()
         setupGoodsRecyclerView()
 
-        viewModel.banners.observe(viewLifecycleOwner){
+        viewModel.promoBanners.observe(viewLifecycleOwner){
                 list ->
             if (!list.isNullOrEmpty())
                 adapterPromoBanners.submitList(list)
         }
-        viewModel.categories.observe(viewLifecycleOwner){
+        viewModel.goodsCategories.observe(viewLifecycleOwner){
                 list ->
-            if (!list.isNullOrEmpty())
-                adapterGoodsCategories.submitList(null)
-                adapterGoodsCategories.submitList(list)
+            list?.let {
+                if (it.isNotEmpty()){
+                    adapterGoodsCategories.submitList(null)
+                    adapterGoodsCategories.submitList(list)
+                }
+            }
         }
         viewModel.goodsState.observe(viewLifecycleOwner){
                 state ->
             when(state){
-                is GoodsParamState.Success -> adapterGoods.submitList(state.goodsParamList)
+                is GoodsParamState.Success -> {
+                    adapterGoods.submitList(state.goodsParamList)
+                }
                 is GoodsParamState.Error -> Toast.makeText(requireContext(), state.message, Toast.LENGTH_LONG).show()
             }
         }

@@ -1,14 +1,11 @@
 package com.rkhvstnv.testdeliveryhs.presentation.main
 
 import android.os.Bundle
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.rkhvstnv.testdeliveryhs.R
 import com.rkhvstnv.testdeliveryhs.databinding.ActivityMainBinding
 
